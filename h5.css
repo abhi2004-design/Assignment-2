@@ -1,0 +1,166 @@
+/* --- VARIABLES & BASE STYLES --- */
+:root {
+    --maroon: #5a1212;
+    --gray: #9c9c9c;
+    --bg: #ececec;
+    --font-stack: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--maroon);
+    font-family: var(--font-stack);
+    margin: 0;
+    padding: 3vw 5vw;
+    line-height: 1;
+}
+
+/* --- NAVIGATION --- */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0;
+}
+
+.asterisk {
+    font-size: 3.5rem;
+    line-height: 0.5;
+    font-weight: bold;
+    color: orangered;
+}
+
+.top-tagline {
+    font-size: 11px;
+    text-align: right;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    margin-bottom: 2rem;
+    
+}
+
+h1 {
+    font-size: 5.5vw;
+    font-weight: 400;
+    margin: 0;
+    line-height: 0.82; 
+    letter-spacing: -0.05em; 
+    text-transform: uppercase;
+    margin-left: 150px;
+
+}
+
+.muted {
+    margin-left: 50px;
+    color: var(--gray);
+}
+.muted2 {
+    margin-left: 200px;
+    
+}
+
+.pill {
+    display: inline-block;
+    width: 1.8em;
+    height: 0.85em;
+    background-color: #222; /* Placeholder for the image in the pill */
+    border-radius: 100px;
+    vertical-align: middle;
+    margin: 0 5px;
+    position: relative;
+    top: -0.05em;
+}
+
+.hero-description {
+    max-width: 380px;
+    font-size: 12px;
+    line-height: 1.4;
+    margin-top: 50px;
+    font-weight: 500;
+    margin-left: 200px;
+    
+}
+
+/* --- PROJECTS GRID --- */
+.projects-section {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 20px;
+    margin-bottom: 8rem;
+    align-items: start;
+    
+}
+
+.sidebar-title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 0.9;
+    border-bottom: 3px solid var(--maroon);
+    width: fit-content;
+    padding-bottom: 5px;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.image-container {
+    width: 100%;
+    aspect-ratio: 1 / 1.1;
+    background: #ccc;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7) contrast(1.2);
+}
+
+/* --- FOOTER --- */
+.footer-cta {
+    text-align: center;
+    padding-bottom: 5rem;
+}
+
+.footer-cta h2 {
+    font-size: 5.5vw;
+    font-weight: 400;
+    line-height: 0.85;
+    letter-spacing: -0.05em;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.footer-description {
+    max-width: 500px;
+    margin: 1.5rem auto;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+/* --- RESPONSIVE MOBILE VIEW --- */
+@media (max-width: 768px) {
+    .projects-section {
+        grid-template-columns: 1fr;
+    }
+    .image-grid {
+        grid-template-columns: 1fr;
+    }
+    h1, .footer-cta h2 {
+        font-size: 12vw;
+    }
+}
